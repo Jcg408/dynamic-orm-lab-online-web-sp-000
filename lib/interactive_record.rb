@@ -65,6 +65,7 @@ class InteractiveRecord
  end
  
  def self.find_by (input)
+   binding.pry
    sql = <<-SQL
    SELECT * FROM #{self.table_name} WHERE input = ?
    SQL
