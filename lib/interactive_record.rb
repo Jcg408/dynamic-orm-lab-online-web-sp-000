@@ -44,6 +44,6 @@ class InteractiveRecord
  end
  
  def col_names_for_insert
-    self.class.col_name
+    self.class.column_names.delete_if{|| }.join(",")
  end
 end
