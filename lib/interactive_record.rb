@@ -69,10 +69,10 @@ class InteractiveRecord
    hash.each do |key, value|
      sql = <<-SQL
      SELECT * FROM #{self.table_name} 
-     WHERE #{key} = ?
+     WHERE #{key} = #{value}
      SQL
  
-  DB[:conn].execute(sql, value)
+  DB[:conn].execute(sql)
 end
 
  end
