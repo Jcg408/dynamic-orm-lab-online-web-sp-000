@@ -70,7 +70,7 @@ class InteractiveRecord
      WHERE #{hash.key.first} = ?
    SQL
  
-   DB[:conn].execute(sql)
+   DB[:conn].execute(sql, hash)
   
 
  end
