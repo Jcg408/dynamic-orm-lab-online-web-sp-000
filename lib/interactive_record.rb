@@ -67,11 +67,11 @@ class InteractiveRecord
  def self.find_by (hash)
    hash.each do |key, value|
      sql = <<-SQL
-     SELECT * FROM #{self.table_name} WHERE '#{key}' = ?
+     SELECT * FROM #{self.table_name} 
+     WHERE #{key} = ?
    SQL
  
-   
-   DB[:conn].execute(sql)
+   DB[:conn].execute(sql, hash)
   end
  end
     
