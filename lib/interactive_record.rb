@@ -23,5 +23,5 @@ class InteractiveRecord
     column_names.compact
   end
   
-  end
+ 
 end
