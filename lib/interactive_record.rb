@@ -50,6 +50,6 @@ class InteractiveRecord
  def values_for_insert
     values = []
     
-    
+    self.column_names.each do |property, value|
  end
 end
