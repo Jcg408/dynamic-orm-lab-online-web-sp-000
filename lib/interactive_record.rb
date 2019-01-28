@@ -73,7 +73,7 @@ class InteractiveRecord
      SQL
  
   DB[:conn].execute(sql, value)
-  
+end
 
  end
     
