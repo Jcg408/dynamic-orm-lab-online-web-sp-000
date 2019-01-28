@@ -66,13 +66,9 @@ class InteractiveRecord
  end
  
  def self.find_by (hash)
-   hash.each do |key, value|
-     table_key = key
-     table_value = value
-     
      sql = <<-SQL
      SELECT * FROM #{self.table_name} 
-     WHERE #{key} = '#{value}'
+     WHERE #{hash.keys} = '#{value}'
      SQL
  
   DB[:conn].execute(sql)
