@@ -69,6 +69,7 @@ class InteractiveRecord
      sql = <<-SQL
      SELECT * FROM #{self.table_name} WHERE #{key} = ?
    SQL
+ end
    
    DB[:conn].execute(sql)
  
