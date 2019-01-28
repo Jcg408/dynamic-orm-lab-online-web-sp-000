@@ -71,7 +71,7 @@ class InteractiveRecord
      WHERE #{key} = ?
    SQL
  
-  info =  DB[:conn].execute(sql, value[0])
+  puts info =  DB[:conn].execute(sql, value[0])
   
   end
  end
