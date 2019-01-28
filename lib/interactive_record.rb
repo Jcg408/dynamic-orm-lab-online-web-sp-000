@@ -67,6 +67,9 @@ class InteractiveRecord
  
  def self.find_by (hash)
    hash.each do |key, value|
+     table_key = key
+     table_value = value
+     
      sql = <<-SQL
      SELECT * FROM #{self.table_name} 
      WHERE #{key} = '#{value}'
