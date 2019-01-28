@@ -51,6 +51,6 @@ class InteractiveRecord
     values = []
     
     self.column_names.each do |col_name|
-      
+      values << col_name unless
  end
 end
