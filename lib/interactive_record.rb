@@ -72,6 +72,7 @@ class InteractiveRecord
    SQL
  
   info =  DB[:conn].execute(sql, value[0])
+  binding.pry
   end
  end
     
